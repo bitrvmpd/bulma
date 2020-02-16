@@ -18,7 +18,7 @@
     }
 
 
-    new Clipboard('.copy', {
+    new ClipboardJS('.copy', {
         target: function(trigger) {
             return trigger.previousElementSibling;
         }
