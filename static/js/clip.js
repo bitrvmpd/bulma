@@ -3,9 +3,7 @@
  */
 
 (function(document, Clipboard) {
-
-    if (document.getElementsByClassName("copy").length <= 0)
-        return;
+ 
     
     var $codes = document.querySelectorAll('pre');
 
@@ -14,16 +12,18 @@
         copy.className = "copy button is-pulled-right";
         copy.textContent = "copy";
         element.append(copy);
-    }
+    }   
 
     for (var i = 0, len = $codes.length; i < len; i++) {
         addCopy($codes[i]);
     }
     
-    new ClipboardJS('.copy', {
-        target: function(trigger) {
-            return trigger.previousElementSibling;
-        }
-    });
+    if (document.getElementsByClassName("copy").length >= 0){
+        new ClipboardJS('.copy', {
+            target: function(trigger) {
+                return trigger.previousElementSibling;
+            }
+        });
+    }
     
 })(document, Clipboard);
