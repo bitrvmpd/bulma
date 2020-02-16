@@ -1,0 +1,12 @@
+.navbar-item {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .navbar-item .button{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    height: 45px;
+  }
