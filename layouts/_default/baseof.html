@@ -46,7 +46,8 @@
     <main>{{ block "main" . }}{{ end }}</main>
     <footer>{{ block "footer" . }}{{ end }}</footer>
 
-    <script async type="text/javascript" src="/js/bulma.js"></script>    
+    <script async type="text/javascript" src="/js/bulma.js"></script>
+    {{ block "scripts" .}}{{ end }}
 </body>
 
 </html>

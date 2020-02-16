@@ -54,13 +54,11 @@
         </div>
     </section>
 </div>
-
 {{ end }} 
 
-<body>
-    <script async type="text/javascript"  src="/js/clipboard.min.js"></script>
-    <script async type="text/javascript"  src="/js/clip.js"></script>
-</body>
-
+{{ define "scripts"}}
+<script async type="text/javascript"  src="/js/clipboard.min.js"></script>
+<script async type="text/javascript"  src="/js/clip.js"></script>
+{{ end }}
 
 {{ define "footer"}} {{ partial "footer.html" .}} {{ end }}
