@@ -1,13 +1,14 @@
-<nav class="navbar is-transparent">
+<nav class="navbar {{if .Site.Params.fixedNavBar }} is-fixed-top {{end}} is-transparent" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{.Site.BaseURL | relURL}}">
-      <img src="/img/bulma.png" alt="Bulma logo">
+      <img src="/img/BLOG.svg" alt="BLOG logo">
     </a>
-    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
   
   <div class="navbar-menu">
@@ -15,7 +16,7 @@
       {{ if .Site.Params.github}}
       <a class="navbar-item" target="blank" href="https://github.com/{{.Site.Params.github}}">
         <span class="icon">
-          <i class="fa fa-github"></i>
+          <i class="fab fa-lg fa-github-alt"></i>
         </span>
       </a>
       {{end}}
@@ -23,22 +24,12 @@
       {{ if .Site.Params.twitter}}
       <a class="navbar-item" target="blank" href="https://twitter.com/{{.Site.Params.twitter}}">
         <span class="icon">
-          <i class="fa fa-twitter"></i>
+          <i class="fab fa-lg fa-twitter"></i>
         </span>
       </a>
       {{end}}
-    </div>
-    
-    <!-- This "navbar-burger" hamburger menu is only visible on mobile -->
-    <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
-    <span class="navbar-burger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </span>
-    
-    <!-- This "nav-menu" is hidden on mobile -->
-    <!-- Add the modifier "is-active" to display it on mobile -->
+    </div>    
+   
     <div class="navbar-end">
       <div class="navbar-item">
         {{ $currentPage := . }}
