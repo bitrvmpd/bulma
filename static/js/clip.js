@@ -4,6 +4,9 @@
 
 (function(document, Clipboard) {
 
+    if (document.getElementsByClassName("copy").length <= 0)
+        return;
+    
     var $codes = document.querySelectorAll('pre');
 
     function addCopy(element) {
@@ -16,11 +19,11 @@
     for (var i = 0, len = $codes.length; i < len; i++) {
         addCopy($codes[i]);
     }
-
-
+    
     new ClipboardJS('.copy', {
         target: function(trigger) {
             return trigger.previousElementSibling;
         }
     });
+    
 })(document, Clipboard);
