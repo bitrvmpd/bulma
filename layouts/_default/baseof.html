@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="/css/landing.css"> {{ block "style" .}} {{end}} {{ $lazylist := findRE "class=\".*?\\blazyload\\b.*?\"|class=lazyload\b" .Content }}
     <!-- http://regexr.com/3f9d1 -->
     {{ if ge (len $lazylist) 1 }}
-    <script async src="/js/lazysizes.min.js"></script>
+    <script defer src="/js/lazysizes.min.js"></script>
     {{ end }}
 </head>
 <!--theme variation-->
@@ -46,7 +46,7 @@
     <main>{{ block "main" . }}{{ end }}</main>
     <footer>{{ block "footer" . }}{{ end }}</footer>
 
-    <script async type="text/javascript" src="/js/bulma.js"></script>
+    <script defer type="text/javascript" src="/js/bulma.js"></script>
     {{ block "scripts" . }}{{ end }}
 </body>
 
